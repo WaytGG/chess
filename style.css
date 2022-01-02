@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+body {
+  width: 800px;
+  height: 800px;
+  margin: 7vh auto;
+}
+
+section {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+div {
+  display: inline-block;
+  background-size:cover;
+  min-width: 100px;
+  min-height: 100px;
+}
+  
+body section:nth-child(2n-1) > div:nth-child(2n),
+body section:nth-child(2n) > div:nth-child(2n-1) {
+  background-image: url(./img/chess-deck-black.jpg);
+}
+
+body section:nth-child(2n-1) > div:nth-child(2n-1),
+body section:nth-child(2n) > div:nth-child(2n) {
+  background-image: url(./img/chess-deck-white.jpg);
+}
